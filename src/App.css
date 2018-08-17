@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+/* ///////////TopSpan////--\/\/--//////////// */
+.topLevelSpan {
+  border: 2px solid blue;
+  display: block;
+  background-image: url('https://i0.wp.com/static.mopik.net/img/3840x2400/sun_17031_mopik.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 24rem;
+  color:  yellow;
+}
+.navUl {
+  list-style: none;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: relative;
+  top: 1rem;
+}
+.animationText{
+  opacity: 0;
+}
+.animationText:active {
+  animation: welcomeText 2s;
+}
+/* ///////////TopSpan///--/\/\--////////////// */
+
+@keyframes welcomeText {
+  from { opacity: 0%; }
+  to { opacity: 100%; }
+}
