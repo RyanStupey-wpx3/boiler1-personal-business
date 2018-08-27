@@ -1,5 +1,7 @@
+
 .App {
   text-align: center;
+  color: #574e63; 
 }
 
 .App-logo {
@@ -25,12 +27,13 @@
 .topLevelSpan {
   border: 2px solid blue;
   display: block;
-  background-image: url('https://i0.wp.com/static.mopik.net/img/3840x2400/sun_17031_mopik.jpg');
+  background-image: url('./Images/newWiman.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 24rem;
-  color:  yellow;
+  height: 50rem;
+  font-weight: 400;
+  color:  white;
 }
 .navUl {
   list-style: none;
@@ -41,14 +44,59 @@
   top: 1rem;
 }
 .animationText{
-  opacity: 0;
+  /* opacity: 0; */
+  border: 2px solid blue;
+  width:10%; 
+  animation-name: welcomeText;
+  /* animation-delay: 3s; */
 }
 .animationText:active {
-  animation: welcomeText 2s;
+  
 }
 /* ///////////TopSpan///--/\/\--////////////// */
 
-@keyframes welcomeText {
-  from { opacity: 0%; }
-  to { opacity: 100%; }
+/* ///////////About/////////////////////////// */
+.centered-main {
+  width: 80%;
+  margin: 0 auto;
 }
+/* .danaImageParent {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  display: block;
+  /* border:2px solid black; */
+/* }  */
+.danaImage {
+  /* max-width: 100%;
+  max-height: 100%; */
+  width: 20rem;
+  height: 25rem;
+  display: block;
+  /* border-radius: 50%;
+  float: left; */
+  float: left;
+  margin-right:1.5rem; 
+  border: 2px solid black;
+  /* margin-top:4rem;  */
+  /* margin-bottom:4rem;  */
+  border-radius: 50%;
+  -webkit-shape-outside:ellipse();
+  shape-outside:ellipse();
+}
+.aboutMeVerbage {
+  font-size: 20px;
+  text-align: left;
+}
+.aboutMeVerbage1::first-letter {
+  font-size: 150%;
+  /* color: ; */
+}
+
+/* ///////////About/////////////////////////// */
+
+@keyframes welcomeText {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+

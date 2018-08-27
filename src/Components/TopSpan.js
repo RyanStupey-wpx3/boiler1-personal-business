@@ -1,12 +1,16 @@
+// has prop called message that displays the message on the hero image
+
 import React, { Component } from 'react';
 import '../App.css';
+import {Link} from 'react-router-dom';
+
 
 
 export default class TopSpan extends Component {
     constructor(props){
         super(props)
         this.state ={
-            welcomeAnimationText: "",
+            welcomeAnimationText: this.props.message,
 
         }
         // this.compLoadAnimation = this.compLoadAnimation.bind(this)
@@ -31,15 +35,18 @@ export default class TopSpan extends Component {
                 <div className="spanDiv topNavDiv">
                     {/* <img className="logo" src={require('#')}/> */}
                     <ul className="navUl">
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Blog</li>
-                        <li>Contact</li>
-                        <li>Rescources</li>
+                        <Link to='/'><li>Home</li></Link> 
+                        <Link to='/about'><li>About</li></Link> 
+                        <Link to='/blog'><li>Blog</li></Link> 
+                        <Link to='/contact'><li>Contact</li></Link> 
+                        <Link to='/rescources'><li>Rescources</li></Link> 
                     </ul>
                 </div>
-                <h2 id="animationText"> Welcome to this Website</h2>
-                <div className="spanDiv"><button>get a quote</button></div>
+                <div className="animationTextParent">
+                    <h2 className="animationText"> {this.state.welcomeAnimationText}</h2>
+                </div>
+                
+                {/* <div className="spanDiv"><button>get a quote</button></div> */}
             </span>
         );
     }
