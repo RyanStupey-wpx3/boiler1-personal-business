@@ -11,7 +11,8 @@ export default class TopSpan extends Component {
         super(props)
         this.state ={
             welcomeAnimationText: this.props.message,
-
+            showImage: this.props.showImage,
+            topSpanImageClass: "",
         }
         // this.compLoadAnimation = this.compLoadAnimation.bind(this)
     }
@@ -19,22 +20,34 @@ export default class TopSpan extends Component {
     //    let animationText = Document.getElementsByClassName('animationText')
     //    animationText.className = 'animationText:active'
     // }
-    // componentDidMount(){
-    //     let animationText = document.getElementById('animationText')
-    //     if (animationText.classList.includes('animationText:active') === false){
-    //         animationText.classList.add('animationText:active')
-    //     } else {
-    //         return({})
-    //     }
-    // }
-    render() {
+    componentDidMount(){
+        // let animationText = document.getElementById('animationText')
+        // if (animationText.classList.includes('animationText:active') === false){
+        //     animationText.classList.add('animationText:active')
+        // } else {
+        //     return({})
+        // }
+        if (this.state.showImage === true){
+            this.setState({
+                topSpanImageClass: "topLevelSpan",
+            })
+        } else {
+            this.setState({
+                topSpanImageClass: "noImage",
+                welcomeAnimationText: "",
+            })
+        }
       
+    }
+    render() {
+        
        
         return (
-            <span className="topLevelSpan">
+            <span className={this.state.topSpanImageClass}>
                 <div className="spanDiv topNavDiv">
-                    {/* <img className="logo" src={require('#')}/> */}
+                    
                     <ul className="navUl">
+                    <div className="danasName"> <h3>Dana Bennie</h3></div>
                         <Link to='/'><li>Home</li></Link> 
                         <Link to='/about'><li>About</li></Link> 
                         <Link to='/blog'><li>Blog</li></Link> 
@@ -42,9 +55,9 @@ export default class TopSpan extends Component {
                         <Link to='/rescources'><li>Rescources</li></Link> 
                     </ul>
                 </div>
-                <div className="animationTextParent">
+                {/* <div className="animationTextParent">
                     <h2 className="animationText"> {this.state.welcomeAnimationText}</h2>
-                </div>
+                </div> */}
                 
                 {/* <div className="spanDiv"><button>get a quote</button></div> */}
             </span>

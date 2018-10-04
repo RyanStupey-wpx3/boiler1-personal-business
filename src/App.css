@@ -33,15 +33,36 @@
   background-size: cover;
   height: 50rem;
   font-weight: 400;
-  color:  white;
+  color: #FFFBE4 ;
+}
+.noImage {
+  height: 10rem;
+  font-weight: 400;
+  color: #FFFBE4 ;
+}
+.danasName {
+  /* border: 2px solid green; */
+  display: inline;
+  padding-right: 39rem;
+}
+.danasName h3 {
+  /* border: 2px solid purple; */
+  font-family: 'Pinyon Script', cursive;
+  display: inline;
+  font-size: 64px;
 }
 .navUl {
   list-style: none;
   display:flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   position: relative;
   top: 1rem;
+  padding-right: 3rem;
+}
+.navUl li {
+  font-size: 1.5rem;  
+  padding: 1.5rem;
 }
 .animationText{
   /* opacity: 0; */
@@ -53,6 +74,11 @@
 .animationText:active {
   
 }
+/* //////////////home/////////////////// */
+.content {
+  font-size: 1.5rem;
+}
+/* //////////////home/////////////////// */
 /* ///////////TopSpan///--/\/\--////////////// */
 
 /* ///////////About/////////////////////////// */

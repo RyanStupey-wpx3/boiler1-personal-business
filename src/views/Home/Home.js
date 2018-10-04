@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import '../App.css';
-import TopSpan from "../Components/TopSpan"
+import '../../App.css';
+import TopSpan from "../../Components/TopSpan"
 
 class Home extends Component {
   render() {
     return (
-      <div className="App">
+     <div>
+      <TopSpan message="from my heart to yours" showImage={true}/>
+      <div className="centered-main">
         <div className="alpha-1"> <div className="beta-1">
           <div className="content">
             <h2>Do you feel like? . . .</h2>
@@ -38,6 +40,7 @@ If you don’t believe me, just ask my adult kids.</p>
           </div>
         </div></div>
         {/* alpha-1 == width: 100% | beta-1 == width: 80%ish; margin: 0 auto; | webContent == style as needed   */}
+      </div>
       </div>
     );
   }

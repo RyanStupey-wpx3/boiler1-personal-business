@@ -2,7 +2,13 @@
   "name": "boiler1-personal-business",
   "version": "0.1.0",
   "private": true,
+  "main": "server/server.js",
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "massive": "^5.3.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-router": "^4.3.1",
@@ -14,5 +20,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:3535"
+    }
   }
 }

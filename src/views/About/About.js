@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
-import '../App.css';
-
+import '../../App.css';
+import TopSpan from "../../Components/TopSpan.js"
 export default class About extends Component {
     render() {
         return (
+            //take out hero on this page and just leave about main content
             <div>
+            <TopSpan message="from my heart to yours" showImage={false}/>
+            
                 <h2>About Dana</h2>
                 <div className="topLevelparent">
                     <div className="centered-main">
                     
                     <p className="aboutMeVerbage1 aboutMeVerbage">
-                        <img className="danaImage" src={require('../Images/danaPic.jpg')}/>
+                        <img className="danaImage" src={require('../../Images/danaPic.jpg')}/>
                     When I was seven my mom did something profoundly wrong. In hind sight she probably told me to
                     clean my room, but it propelled me into my calling. “That’s IT!” I yelled at my Chatty Kathy doll. “I’m
                     going to write a book!” I promptly sat down at my plastic typewriter and typed out the best-selling
