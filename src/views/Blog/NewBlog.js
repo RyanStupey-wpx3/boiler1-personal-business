@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {connect} from 'react-redux';
+import {changeBool} from "../../redux/reducer";
+// import { connect } from 'net';
 
-export default class NewBlog extends Component {
+class NewBlog extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -23,7 +26,6 @@ export default class NewBlog extends Component {
     postToDb(){
         axios.post('/api/new-post', {author: this.state.author, title: this.state.title, content: this.state.content, imageurl: this.state.imageurl})
         .then((resp) => {
-            console.log('resp.data', resp.data)
             this.setState({
                 author: "",
                 // date: write function that uses date api
@@ -31,18 +33,23 @@ export default class NewBlog extends Component {
                 content:"",
                 title:"",
             })
+            if(this.props.postBool === false){
+                this.props.changeBool(true)
+            } else {
+                this.props.changeBool(false)/* change redux state back to false*/
+            }
         })
         .catch((err) => {
              console.log('err', err)
         })
 
-        
+       
     }
 
     render() {
         return (
             <div>
-                <input type="text" onChange={(e) => this.handleChange(e)} name="name" value={this.state.name}placeholder="name" />
+                <input type="text" onChange={(e) => this.handleChange(e)} name="author" value={this.state.author}placeholder="name" />
                 {/* <input type="text" onChange={(e) => this.handleChange(e)} name="date" value={this.state.date}placeholder="date" /> */}
                 <input type="text" onChange={(e) => this.handleChange(e)} name="title" value={this.state.title}placeholder="title" />
                 <textarea type="text" onChange={(e) => this.handleChange(e)} name="content" value={this.state.content}placeholder="content" />
@@ -52,3 +59,14 @@ export default class NewBlog extends Component {
         );
     }
 }
+const mapDispatchToProps = {
+    changeBool: changeBool,
+}
+
+const mapStateToProps = (state) => {
+    return {
+        postBool: state.postBool,
+        user: state.user
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(NewBlog)

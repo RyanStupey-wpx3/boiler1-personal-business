@@ -42,6 +42,14 @@ app.post('/api/new-post', (req, res) => {
     })
 })
 
+app.delete('/api/post/:id', (req, res) =>{
+    const dbInstance = req.app.get('DB')
+    const {params} = req
+    dbInstance.delete_post([params.id])
+    .then((posts) => res.status(200).send(posts) )
+    .catch((err) => res.status(500).send(err) );
+})
+
 console.log('process.env.DB_CONNECTION_STRING', process.env.DB_CONNECTION_STRING)
 
 const port = 3535;

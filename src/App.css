@@ -74,12 +74,15 @@
 .animationText:active {
   
 }
+/* ///////////TopSpan///--/\/\--////////////// */
+
 /* //////////////home/////////////////// */
 .content {
   font-size: 1.5rem;
 }
 /* //////////////home/////////////////// */
-/* ///////////TopSpan///--/\/\--////////////// */
+
+
 
 /* ///////////About/////////////////////////// */
 .centered-main {
@@ -121,6 +124,20 @@
 
 /* ///////////About/////////////////////////// */
 
+
+/* ///////////////blog///////////////// */
+.blogParent {
+  margin: 0 auto;
+  width: 70%;
+  font-family: 'Open Sans', sans-serif;
+}
+.blogTitle{
+  font-size: 3.5rem;
+}
+.blogContent{
+  font-size: 1.3rem;
+}
+/* ///////////////blog///////////////// */
 @keyframes welcomeText {
   from { opacity: 0; }
   to { opacity: 1; }
