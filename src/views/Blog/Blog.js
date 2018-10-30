@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import NewBlog from './NewBlog';
 import TopSpan from "../../Components/TopSpan.js";
 import {connect} from 'react-redux';
 import {changeBool} from '../../redux/reducer';
+//styles from app.css
 // import { connect } from 'net';
 
 class Blog extends Component {
@@ -17,7 +17,7 @@ class Blog extends Component {
     }
 
     fetchPosts(){
-        axios.get('/api/')
+        axios.get('/api/blogs')
         .then((resp) =>{
             this.setState({
                 blogs:resp.data
@@ -76,21 +76,21 @@ class Blog extends Component {
     
     render() {
         const displayBlogs = this.state.blogs.map((elem, ind) => {
-            return (
-                <div>
-                    <div>{elem.author}</div>
-                    <div className="blogTitle">{elem.title}</div>
-                    <div className="blogContent">{elem.content}</div>
-                    <div>{elem.Imageurl}</div>
-                    <button onClick={() => {  this.delete_post(elem.id); console.log('elem.id', elem.id)}}>Delete</button>
-                </div>
-            )
+            return(<div>
+                 <h1 className="title">{elem.title}</h1>
+                             <h4 className="postUser"> written by: {elem.author}</h4>
+                             <div className="blogImageParent">
+                                <img className="postedImage" src={elem.imageurl} />
+                             </div>
+                                 <div className="blogImageDiv"></div>{elem.content}
+                             <hr/>
+            </div>)
         })
+
         return (
             <div>
                 <TopSpan message="from my heart to yours" showImage={true}/>
             <div className="blogParent">
-                <NewBlog/>
                 <h2> Blog </h2>
                <div> blogs: {displayBlogs} </div>   
             </div>

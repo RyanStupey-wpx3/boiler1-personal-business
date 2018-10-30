@@ -28,6 +28,17 @@ app.get('/api/blogs', (req, res) => {
 // made endpoint
 // made connection to dbInstance
 // need to render on blog view, conditionally render, then test, bug fix, test, bug fix,
+app.put('/api/posts/:id',  (req, res) => {
+    const dbInstance = req.app.get('DB');
+    const {id, author, title, content, imageurl} = req.body;
+    console.log('req.body', req.body)
+    dbInstance.edit_post([author, title, content, imageurl,  id])
+    .then((prods) =>  {
+        console.log('prods', prods)
+        res.status(200).send(prods)
+})
+    .catch((err) => res.status(500).send(err));
+},)
 
 app.post('/api/new-post', (req, res) => {
     const dbInstance = req.app.get('DB')

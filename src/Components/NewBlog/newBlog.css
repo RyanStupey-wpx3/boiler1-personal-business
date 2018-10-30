@@ -1,0 +1,112 @@
+.inputContainer{
+    /* border: 2px solid lightgreen; */
+    margin: 0 auto;
+    height: 25rem;
+    width: 80%;
+
+}
+
+/* .pictureInput{
+    position: relative;
+    left: 0.3rem;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+} */
+
+.alert {
+    padding: 20px;
+    background-color: blue; /* Red */
+    color: white;
+    /* margin-bottom: 15px; */
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dragImage {
+    position: absolute;
+    left: 24%;
+    top: 7rem;
+    font-size: 18px;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+
+.usernameInput{
+    position: relative;
+    float: right;
+    width: 70%;
+    display: block;
+}
+
+.dateInput{
+    position: relative;
+    float: right;
+    width: 70%;
+    display: block;
+}
+
+.titleInput{
+    position: relative;
+    top: -14.5rem;
+    float: right;
+    height: 1.4rem;
+    width: 70%;
+}
+
+.blogContent{
+    position: relative;
+    /* display: block; */
+    /* left: 9rem; */
+    float: right;
+    top: -14.5rem;
+    /* margin: 0 auto; */
+    height: 11.5rem;
+    width: 70%;
+    overflow: hidden;
+    resize: none;
+}
+.submitButton {
+    /* border: 2px solid yellow; */
+    position: relative;
+    top: -1.2rem;
+    left: 34.7rem;
+    width: 12rem;
+    height: 2rem;
+}
+.input{
+    padding: 0;
+}
+.postForm {
+    /* border: 5px solid red; */
+    height:16rem;
+    margin-left: 10%;
+    position: relative;
+}
+.dropZoneDiv {
+    border: 2px solid blue;
+    display: inline-block;
+    position: absolute;
+    width: 28%;
+    height: 96%;
+}
+
+.uploadedImage {
+    /* border: 2px solid green; */
+    height: 100%;
+    width: 100%;
+    
+}

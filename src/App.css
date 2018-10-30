@@ -12,7 +12,6 @@
 .App-header {
   background-color: #222;
   height: 150px;
-  padding: 20px;
   color: white;
 }
 
@@ -25,25 +24,38 @@
 }
 /* ///////////TopSpan////--\/\/--//////////// */
 .topLevelSpan {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   display: block;
   background-image: url('./Images/newWiman.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50rem;
+  height: 53rem;
   font-weight: 400;
-  color: #FFFBE4 ;
+  margin-top: -1rem;
+  /* /////purple//// */
+  /* color: #574E63; */
+  color: #1E0906 ;
+  /* /////white//// */
+  /* color: #FFFBE4 ; */
 }
 .noImage {
   height: 10rem;
   font-weight: 400;
-  color: #FFFBE4 ;
+  color: #1E0906 ;
+  /* color: #FFFBE4 ; */
+}
+.topNavDiv{
+  /* border: 2px solid yellow; */
+  width: 100%;
+  padding-top:1.5rem;
 }
 .danasName {
   /* border: 2px solid green; */
   display: inline;
-  padding-right: 39rem;
+  /* margin-right: 28rem; */
+  position: absolute;
+  left: 1%;
 }
 .danasName h3 {
   /* border: 2px solid purple; */
@@ -51,18 +63,44 @@
   display: inline;
   font-size: 64px;
 }
+@media(max-width: 700px){
+  .danasName{
+    /* border: 5px solid lemonchiffon; */
+    width: 100%;
+    left: 0%;
+    top: 0.5rem;
+    margin: 0 auto;
+  }
+}
 .navUl {
+  /* border: 2px solid red; */
   list-style: none;
   display:flex;
   flex-direction: row;
   justify-content: flex-end;
   position: relative;
   top: 1rem;
-  padding-right: 3rem;
+  
+  /* padding-right: 3rem; */
+  text-decoration: none;
 }
-.navUl li {
-  font-size: 1.5rem;  
-  padding: 1.5rem;
+.navUl a{
+  font-size: 1.5rem; 
+  /* color: #FFFBE4; */
+  color: #1E0906;
+  padding-right: 1.5%;
+  text-decoration: none;
+}
+
+@media(max-width: 700px){
+  .navUl {
+    top: 3.5rem;
+    left: -0.5rem;
+  }
+  .navUl a{
+    top: 6rem;
+    font-size: 1.3rem;
+  }
 }
 .animationText{
   /* opacity: 0; */
@@ -127,6 +165,7 @@
 
 /* ///////////////blog///////////////// */
 .blogParent {
+  /* border: 3px solid red; */
   margin: 0 auto;
   width: 70%;
   font-family: 'Open Sans', sans-serif;
@@ -137,9 +176,23 @@
 .blogContent{
   font-size: 1.3rem;
 }
+.blogImageParent{
+  border: 2px solid green;
+  height: 35rem;
+}
+.postedImage{
+  width: 100%;
+  height: 100%;
+}
 /* ///////////////blog///////////////// */
 @keyframes welcomeText {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@media(max-width: 800px){
+  .blogParent{
+    width: 100%;
+  }
 }
 

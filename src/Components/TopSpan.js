@@ -46,8 +46,8 @@ export default class TopSpan extends Component {
             <span className={this.state.topSpanImageClass}>
                 <div className="spanDiv topNavDiv">
                     
-                    <ul className="navUl">
                     <div className="danasName"> <h3>Dana Bennie</h3></div>
+                    <ul className="navUl">
                         <Link to='/'><li>Home</li></Link> 
                         <Link to='/about'><li>About</li></Link> 
                         <Link to='/blog'><li>Blog</li></Link> 

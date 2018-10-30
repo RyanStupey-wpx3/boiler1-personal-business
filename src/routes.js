@@ -5,6 +5,7 @@ import Home from './views/Home/Home'
 import Blog from './views/Blog/Blog'
 import Contact from './views/Contact/Contact'
 import Rescources from './views/Rescources/Rescources'
+import AdminBlog from './views/AdminBlog/AdmnBlog'
 
 
 export default 
@@ -14,4 +15,5 @@ export default
     <Route path="/blog" component={Blog}/>
     <Route path="/contact" component={Contact}/>
     <Route path="/rescources" component={Rescources}/>
+    <Route path="/admin" component={AdminBlog}/>
 </Switch> 
