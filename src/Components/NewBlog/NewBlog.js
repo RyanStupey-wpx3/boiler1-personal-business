@@ -99,7 +99,7 @@ class NewBlog extends Component {
                 <input type="text" onChange={(e) => this.handleChange(e)} name="author" className="usernameInput input" value={this.state.author}placeholder="name" />
                 {/* <input type="text" onChange={(e) => this.handleChange(e)} name="date" className="dateInput input" value={this.state.date}placeholder="date" /> */}
                 <input type="text" onChange={(e) => this.handleChange(e)} name="title" className="titleInput input" value={this.state.title}placeholder="title" />
-                <textarea type="text" onChange={(e) => this.handleChange(e)} name="content" className="blogContent input" value={this.state.content}placeholder="content" />
+                <textarea type="text" onChange={(e) => this.handleChange(e)} name="content" className="newBlogContent input" value={this.state.content}placeholder="content" />
                 <input type="submit" onClick={() => this.postToDb()} className="submitButton" value="post"/>
             </form>
             </div>

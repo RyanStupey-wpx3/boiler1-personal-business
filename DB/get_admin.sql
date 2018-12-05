@@ -1,0 +1,1 @@
+select * from admins WHERE admin_name = $1 AND admin_password = $2 AND middlename = $3;

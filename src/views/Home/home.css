@@ -1,0 +1,136 @@
+.home-centered-main {
+    /* border: 2px solid green; */
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: 0rem;
+    text-align: left;
+    padding-bottom: 5rem;
+    padding-top: 0;
+  }
+  .alpha-1{
+      width: 100%;
+  }
+.home-content {
+    font-size: 1.2rem;
+    /* border-bottom: 0.3px solid black; */
+    height: 23rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+.feelLike{
+    /* border: 2px solid red; */
+    border-top: 0;
+    position: relative;
+    left: 20%;
+}
+.feelLike h2 {
+    /* text-align: center; */
+    position: relative;
+    left: 23%;
+}
+.feelLike p {
+    /* border: 2px solid green; */
+    width: 50%;
+    display: inline-block;
+    position: relative;
+    top: -3rem;
+    left: 2rem;
+}
+img {
+    border: 1px solid black;
+    width: 11rem;
+    height: 10rem;
+}
+.whoIs{
+    border-bottom: 0;
+    padding-top: 2rem;
+    position: relative;
+    left: 20%;
+}
+.brokenDreams{
+    /* border: 2px solid blue; */
+    
+}
+.whoIsDana{
+    width: 8rem;
+    height: 10rem;
+    
+}
+.whoIs h2 {
+    position: relative;
+    left: 23%;
+}
+.whoIs p {
+    /* border: 2px solid green; */
+    width: 50rem;
+    display: inline-block;
+    position: relative;
+    top: -2rem;
+    left: 2rem;
+}
+.white{
+    width: 100%;
+    background-color: #fff;
+}
+.myMission {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    text-align: center;
+}
+.myMission h2{
+    text-align: center;
+}
+
+@media(max-width: 800px){
+    /* //////feels Like/////// */
+    .feelLike{
+        height: 33rem;
+        left: 0;
+    }
+    .feelLike h2 {
+        width: 95vw;
+        left: 0;
+        /* border: 2px solid red; */
+        text-align: center;
+    }
+    .feelLike img{
+        width: 10rem;
+        height: 7rem;
+        position: relative;
+        left: 26%;
+        border-radius: 3px;
+    }
+    .feelLike p{
+        position: relative;
+        top: 1rem;
+        width: 80%;
+    /* top: 0.5rem; */
+    }
+
+    /* /////////myMission////////// */
+    .myMission{
+        height: 38rem;
+    }
+    /* /////who is dana///// */
+    .whoIs {
+        left: 0;
+        height: 35rem;
+    }
+    .whoIs h2 {
+        width: 95vw;
+        left: 0;
+        text-align: center;
+    }
+    .whoIsDana {
+        position: relative;
+        left: 30%;
+    }
+    .whoIs p {
+        position: relative;
+        left: 3rem;
+        top: 1rem;
+        width: 80%;
+    }
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../App.css';
+import './home.css'
 import TopSpan from "../../Components/TopSpan"
 
 class Home extends Component {
@@ -7,18 +8,19 @@ class Home extends Component {
     return (
      <div>
       <TopSpan message="from my heart to yours" showImage={true}/>
-      <div className="centered-main">
+      <div className="home-centered-main">
         <div className="alpha-1"> <div className="beta-1">
-          <div className="content">
-            <h2>Do you feel like? . . .</h2>
+          <div className="home-content feelLike">
+            <h2>Do you feel like?</h2>
+          <img  className="brokenDreams" src={require('../../Images/broken-dreams.jpg')}/>
             <p>God can’t use you because you’ve been through divorce? All your hopes and dreams
 were shattered when the judge stamped that certificate? It’s easier for people in the
 church to point the finger of judgment rather than help heal your wounds? Others view
 you as leprous because you are divorced?</p>
           </div>
         </div></div>
-        <div className="alpha-1"> <div className="beta-1">
-          <div className="content">
+        <div className="alpha-1"> <div className="white">
+          <div className="home-content myMission">
           <h2>My mission</h2>
           <p>Just like you or someone you love, I’ve been through a divorce. I’ve walked this road with the same
 devastating fear, shame, loss and depression. And, just like you, I encountered judgment disguised as well-
@@ -30,17 +32,20 @@ Your call and blessings are assured. He is waiting for you to reach out and take
           </div>
         </div></div>
         <div className="alpha-1"> <div className="beta-1">
-          <div className="content">
+          <div className="home-content whoIs">
             <h2>Who is Dana?</h2>
+            <img  className="whoIsDana" src={require('../../Images/danaPic.jpg')}/>
             <p>Glad you asked! I am a 50-something (sounds younger than giving my exact age)
 divorcee with two grown children. I’ve been active in ministry for most of my adult life
 ranging from nursery worker, youth co-pastor, teacher/speaker and pastor’s wife. I’m a
 mom, writer, worship singer and mighty woman of God rolled into a 5’4” force of nature.
 If you don’t believe me, just ask my adult kids.</p>
           </div>
-        </div></div>
+        </div>
+        </div>
         {/* alpha-1 == width: 100% | beta-1 == width: 80%ish; margin: 0 auto; | webContent == style as needed   */}
       </div>
+      <footer></footer>
       </div>
     );
   }

@@ -18,9 +18,11 @@ console.log(props)
             content: this.props.blogs.content,
             imageurl: this.props.blogs.imageurl,
         }
-       
+       this.handleSubmit = this.handleSubmit.bind(this)
     }
-
+    handleSubmit(event) {
+        event.preventDefault();
+    }
     
 
     onImageDrop(files) {

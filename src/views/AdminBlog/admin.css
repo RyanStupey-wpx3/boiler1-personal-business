@@ -1,6 +1,17 @@
-.blogImageParent{
-    border: 2px solid green;
+.adminBlogImageParent   {
+    /* border: 2px solid green; */
     height: 35rem;
+}
+.adminPostUser{
+    text-align: center;
+    margin: 0.5rem;
+}
+.adminBlogContent{
+    position: relative;
+    /* top: 13rem; */
+    font-size: 1.3rem;
+    width: 70%;
+    margin: 0 auto;
 }
 .postForm {
     /* border: 5px solid red; */

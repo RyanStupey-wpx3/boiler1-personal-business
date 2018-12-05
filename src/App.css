@@ -1,7 +1,6 @@
-
 .App {
-  text-align: center;
-  color: #574e63; 
+  /* text-align: center; */
+  /* color: #574e63; */
 }
 
 .App-logo {
@@ -22,6 +21,7 @@
 .App-intro {
   font-size: large;
 }
+
 /* ///////////TopSpan////--\/\/--//////////// */
 .topLevelSpan {
   /* border: 2px solid blue; */
@@ -30,41 +30,48 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 53rem;
+  height: 33rem;
   font-weight: 400;
-  margin-top: -1rem;
-  /* /////purple//// */
-  /* color: #574E63; */
-  color: #1E0906 ;
-  /* /////white//// */
-  /* color: #FFFBE4 ; */
+  position: relative;
+  top: -1rem;
+  color: #1E0906;
 }
+
 .noImage {
-  height: 10rem;
+  /* border: 2px solid #ffa500; */
+  display: block;
+  width: 100%;
+  height: 3rem;
+  position: relative;
+  top: -1rem;
   font-weight: 400;
-  color: #1E0906 ;
+  color: #1E0906;
   /* color: #FFFBE4 ; */
 }
-.topNavDiv{
+
+.topNavDiv {
   /* border: 2px solid yellow; */
   width: 100%;
-  padding-top:1.5rem;
+  /* padding-top:1.5rem; */
 }
+
 .danasName {
   /* border: 2px solid green; */
   display: inline;
-  /* margin-right: 28rem; */
   position: absolute;
+  top: 1.5rem;
   left: 1%;
 }
+
 .danasName h3 {
   /* border: 2px solid purple; */
   font-family: 'Pinyon Script', cursive;
   display: inline;
   font-size: 64px;
 }
-@media(max-width: 700px){
-  .danasName{
+
+@media(max-width: 700px) {
+  .danasName {
     /* border: 5px solid lemonchiffon; */
     width: 100%;
     left: 0%;
@@ -72,127 +79,167 @@
     margin: 0 auto;
   }
 }
+
 .navUl {
   /* border: 2px solid red; */
   list-style: none;
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: flex-end;
   position: relative;
-  top: 1rem;
-  
-  /* padding-right: 3rem; */
+  top: 3rem;
   text-decoration: none;
 }
-.navUl a{
-  font-size: 1.5rem; 
+
+.navUl a {
+  font-size: 1.5rem;
   /* color: #FFFBE4; */
   color: #1E0906;
   padding-right: 1.5%;
   text-decoration: none;
 }
 
-@media(max-width: 700px){
+@media(max-width: 700px) {
   .navUl {
-    top: 3.5rem;
-    left: -0.5rem;
+    /* border: 2px solid red; */
+    
+    justify-content: space-evenly;
+    top: 4.5rem;
+    /* left: -0.5rem; */
+    width: 90%;
   }
-  .navUl a{
+
+  .navUl a {
     top: 6rem;
     font-size: 1.3rem;
   }
 }
-.animationText{
+
+.animationText {
   /* opacity: 0; */
-  border: 2px solid blue;
-  width:10%; 
+  /* border: 2px solid blue; */
+  width: 10%;
   animation-name: welcomeText;
   /* animation-delay: 3s; */
 }
-.animationText:active {
-  
-}
+
+.animationText:active {}
+
 /* ///////////TopSpan///--/\/\--////////////// */
 
 /* //////////////home/////////////////// */
 .content {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
+
 /* //////////////home/////////////////// */
 
 
 
 /* ///////////About/////////////////////////// */
+
 .centered-main {
   width: 80%;
   margin: 0 auto;
+  position: relative;
+  /* top: 5rem; */
 }
-/* .danaImageParent {
-  width: 20rem;
-  height: 20rem;
-  border-radius: 50%;
-  display: block;
-  /* border:2px solid black; */
-/* }  */
+
+.aboutDanah2 {
+  text-align: center;
+  position: relative;
+}
+
 .danaImage {
-  /* max-width: 100%;
-  max-height: 100%; */
   width: 20rem;
   height: 25rem;
   display: block;
-  /* border-radius: 50%;
-  float: left; */
   float: left;
-  margin-right:1.5rem; 
+  margin-right: 1.5rem;
   border: 2px solid black;
-  /* margin-top:4rem;  */
-  /* margin-bottom:4rem;  */
   border-radius: 50%;
-  -webkit-shape-outside:ellipse();
-  shape-outside:ellipse();
+  -webkit-shape-outside: ellipse();
+  shape-outside: ellipse();
 }
+
 .aboutMeVerbage {
   font-size: 20px;
   text-align: left;
 }
+
 .aboutMeVerbage1::first-letter {
-  font-size: 150%;
+  /* font-size: 150%; */
   /* color: ; */
+}
+
+@media(max-width: 800px){
+  .topLevelparent{
+    height: 190rem;
+  }
+  .danaImage{
+    position: relative;
+    top: 2rem;
+    left: -1rem;
+    shape-outside: none;
+  }
+  .aboutMeVerbage1  {
+    /* border: 2px solid red; */
+    display: block;
+    position: relative;
+    top: 3rem;
+    /* height: 20rem; */
+    width: 100%;
+  }
+  .firstP{
+    /* border: 2px solid blue; */
+    /* height: 5rem; */
+  }
+  .aboutDanah2 {
+    position: relative;
+    top: 2rem;
+  }
 }
 
 /* ///////////About/////////////////////////// */
 
 
 /* ///////////////blog///////////////// */
-.blogParent {
-  /* border: 3px solid red; */
-  margin: 0 auto;
-  width: 70%;
-  font-family: 'Open Sans', sans-serif;
-}
-.blogTitle{
-  font-size: 3.5rem;
-}
-.blogContent{
-  font-size: 1.3rem;
-}
-.blogImageParent{
-  border: 2px solid green;
-  height: 35rem;
-}
-.postedImage{
-  width: 100%;
-  height: 100%;
-}
+
+
 /* ///////////////blog///////////////// */
 @keyframes welcomeText {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
-@media(max-width: 800px){
-  .blogParent{
-    width: 100%;
-  }
+footer {
+  height: 10rem;
+  width: 100%;
+  background-color: #574E63;
+}
+/* ////////////transition CSS/////////// */
+.fade-appear,
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms linear 150ms;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 150ms linear;
 }
 

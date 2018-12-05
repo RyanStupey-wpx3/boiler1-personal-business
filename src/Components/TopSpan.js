@@ -43,16 +43,15 @@ export default class TopSpan extends Component {
         
        
         return (
-            <span className={this.state.topSpanImageClass}>
+            <div className={this.state.topSpanImageClass}>
                 <div className="spanDiv topNavDiv">
-                    
                     <div className="danasName"> <h3>Dana Bennie</h3></div>
                     <ul className="navUl">
                         <Link to='/'><li>Home</li></Link> 
                         <Link to='/about'><li>About</li></Link> 
                         <Link to='/blog'><li>Blog</li></Link> 
                         <Link to='/contact'><li>Contact</li></Link> 
-                        <Link to='/rescources'><li>Rescources</li></Link> 
+                        {/* <Link to='/rescources'><li>Rescources</li></Link>  */}
                     </ul>
                 </div>
                 {/* <div className="animationTextParent">
@@ -60,7 +59,7 @@ export default class TopSpan extends Component {
                 </div> */}
                 
                 {/* <div className="spanDiv"><button>get a quote</button></div> */}
-            </span>
+            </div>
         );
     }
 }

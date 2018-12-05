@@ -3,6 +3,7 @@ import axios from 'axios'
 import TopSpan from "../../Components/TopSpan.js";
 import {connect} from 'react-redux';
 import {changeBool} from '../../redux/reducer';
+import './blog.css'
 //styles from app.css
 // import { connect } from 'net';
 
@@ -76,13 +77,13 @@ class Blog extends Component {
     
     render() {
         const displayBlogs = this.state.blogs.map((elem, ind) => {
-            return(<div>
-                 <h1 className="title">{elem.title}</h1>
+            return(<div className="immediateBlogParent">
+                 <h1 className="blogTitle">{elem.title}</h1>
                              <h4 className="postUser"> written by: {elem.author}</h4>
                              <div className="blogImageParent">
                                 <img className="postedImage" src={elem.imageurl} />
                              </div>
-                                 <div className="blogImageDiv"></div>{elem.content}
+                                 <div className="blogContent">{elem.content}</div>
                              <hr/>
             </div>)
         })
@@ -91,9 +92,9 @@ class Blog extends Component {
             <div>
                 <TopSpan message="from my heart to yours" showImage={true}/>
             <div className="blogParent">
-                <h2> Blog </h2>
-               <div> blogs: {displayBlogs} </div>   
+               <div> {displayBlogs} </div>   
             </div>
+            <footer></footer>
             </div>
         );
     }
